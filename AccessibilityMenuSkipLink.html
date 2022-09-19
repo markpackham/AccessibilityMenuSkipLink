@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessibility Menu Skip Link</title>
     <style>
+    /* this part isn't necessary it is just there to make it more clear which link we are on */
     :focus {
         outline: 5px solid red;
+    }
+
+    .skip-link{
+        
     }
     </style>
 </head>
 <body>
     <header>
+        <!-- people with screen readers may choose to skip to the main content so it's keyboard Tab focused -->
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <nav>
             <ul style="display: flex; list-style:none; gap: 1rem;">
                 <li><a href="#">Home</a></li>
@@ -24,7 +31,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main-content">
         <section>
             <h1>Article Title</h1>
             <article>
